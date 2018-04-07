@@ -1,0 +1,11 @@
+/idea/
+/idea/*
+*.iml
+/src/assets/components
+/bower_components
+/node_modules/
+npm-debug.log
+/.idea/
+dist/
+/dist/
+package-lock.json

@@ -1,0 +1,25 @@
+{
+  "name": "jug-site",
+  "homepage": "https://github.com/lucasduete/jug-site/",
+  "authors": [
+    "Lucas Duete"
+  ],
+  "description": "Aplicação para cadeira de Banco de Dados não Relacionais.",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.6.9",
+    "materialize": "^0.100.2",
+    "jquery": "^3.3.1",
+    "angular-route": "^1.6.9",
+    "chart.js": "^2.7.2",
+    "sweetalert2": "^7.17.0"
+  }
+}

@@ -32,8 +32,7 @@
             let request = {
                 url: urlBase,
                 method: methods.POST,
-                data: user,
-                headers: { 'Authorization': 'Bearer ' + localStorage.token }
+                data: user
             }
 
             return $http(request);

@@ -13,10 +13,10 @@
 
             if (publ) {
                 newPubl = {
-                    'titulo': publ.titulo,
-                    'conteudo' : publ.conteudo,
-                    'data': "2000-02-01",
-                    'tecnologia': publ.tecnologia
+                    'Titulo': publ.titulo,
+                    'Conteudo' : publ.conteudo,
+                    'Data': "2000-02-01",
+                    'Tecnologia': publ.tecnologia
                 };
             }
 
@@ -27,7 +27,7 @@
                         title: 'Publicação Cadastrada!',
                         text: 'A Publicação foi cadastrada com sucesso!',
                     });
-                    location.reload();
+                    location.href = "/#!/index";
                 })
                 .catch(function(error) {
                     swal({
@@ -59,7 +59,7 @@
                                 type: 'success',
                                 confirmButtonText: 'Ok'
                             }).then(function(result) {
-                                location.reload();
+                                location.href = "/#!/index";
                             });
                     })
                     .catch(function(error) {

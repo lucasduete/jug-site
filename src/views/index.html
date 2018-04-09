@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 3%;" data-ng-init="Publication.readAll()">
+	<div data-ng-repeat="publication in Publication.publications">
+
+	<div class="row">
+		<div class="col s12 m12 l12">
+		  <div class="flot-text right">
+		    <a href="/#!/cadastrarPublication">cadastrar publicação</a>
+		    <a href="/#!/login">logout</a>
+		  </div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="col s12 m12 l12">
+		  <div class="card indigo darken-5">
+		    <div class="card-content white-text">
+		      <span class="card-title">{{publication.Titulo}}</span>
+		      <p>{{publication.Conteudo}}</p>
+		    </div>
+		    <div class="card-action">
+		      <a href="/#!/publication/{{publication.ID}}">Ver Mais</a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	</div>
+</div>

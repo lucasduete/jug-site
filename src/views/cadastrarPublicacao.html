@@ -1,0 +1,42 @@
+<div class="container" style="margin-top: 3%;">
+    <div class="row">
+      <div class="col s12 m8 l8 offset-l2 offset-l2">
+        <div class="card-panel">
+          <h4 class="header2 flow-text" style="margin-left: 5%;">Criar Nova Publicação</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">subject</i>
+                  <input data-ng-model="Publication.publication.titulo" id="titulo" class="validate invalid" type="text">
+                  <label for="titulo" class="active">Titulo</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">description</i>
+                  <input data-ng-model="Publication.publication.conteudo" id="conteudo" class="validate invalid" type="text">
+                  <label for="conteudo" class="active">Conteudo</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">bookmark</i>
+                  <input data-ng-model="Publication.publication.tecnologia" id="tecnologia" class="validate invalid" type="text">
+                  <label for="tecnologia" class="active">Tecnologia</label>
+                </div>
+              </div>
+              <div class="row right">
+                <div class="row">
+                  <div class="input-field col s12 right">
+                    <button class="waves-effect waves-light btn" ng-click="Publication.create(Publication.publication)"><i class="material-icons right">done_all</i>Cadastrar</button>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

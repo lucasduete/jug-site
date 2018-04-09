@@ -18,7 +18,7 @@
                 url: urlBase,
                 method: methods.POST,
                 data: tecnology,
-                headers: { 'Authorization': 'Bearer ' + localStorage.token }
+                headers: { 'Authorization': localStorage.token }
             }
 
             return $http(request);
@@ -29,7 +29,7 @@
                 url: urlBase,
                 method: methods.PATCH,
                 data: tecnology,
-                headers: { 'Authorization': 'Bearer ' + localStorage.token }
+                headers: { 'Authorization': localStorage.token }
             }
 
             return $http(request);
@@ -40,7 +40,7 @@
         		url : urlBase + path,
         		method : methods.DELETE,
                 data : tecnology,
-        		headers: { 'Authorization': 'Bearer ' + localStorage.token }
+        		headers: { 'Authorization': localStorage.token }
         	}
 
         	return $http(request); 
@@ -50,7 +50,7 @@
             let request = {
                 url: urlBase,
                 method: methods.GET,
-                headers: { 'Authorization': 'Bearer ' + localStorage.token }
+                headers: { 'Authorization': localStorage.token }
             }
 
             return $http(request);

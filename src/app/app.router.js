@@ -16,6 +16,11 @@
                 controller: 'UserController',
                 controllerAs: 'User'
             })
+            .when('/index', {
+                templateUrl: '../views/index.html',
+                controller: 'PublicationController',
+                controllerAs: 'Publication'
+            })
             .otherwise({
                 redirectTo: '/login'
             })

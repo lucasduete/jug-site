@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('JugSite', ['LoginController', 'UserController', 'ngRoute'])
+    angular.module('JugSite', ['LoginController', 'UserController', 'PublicationController', 'ngRoute'])
         .run(preAtivador);
 
     function preAtivador($rootScope, $location) {

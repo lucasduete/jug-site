@@ -1,0 +1,49 @@
+<div class="container" style="margin-top: 3%;">
+    <div class="row">
+      <div class="col s12 m8 l8 offset-l2 offset-l2">
+        <div class="card-panel">
+          <h4 class="header2 flow-text" style="margin-left: 5%;">Criar Nova Conta</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">perm_identity</i>
+                  <input data-ng-model="User.usuario.nome" id="nome" class="validate valid" type="text">
+                  <label for="first_name" class="active">Nome</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">perm_identity</i>
+                  <input data-ng-model="User.usuario.username" id="username" class="validate valid" type="text">
+                  <label for="username" class="active">Username</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">email</i>
+                  <input data-ng-model="User.usuario.email" id="email" class="validate invalid" type="email">
+                  <label for="email" class="active">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix" style="margin-top: 1%;">lock_outline</i>
+                  <input data-ng-model="User.usuario.senha" id="password" class="validate" type="password">
+                  <label for="password" class="">Password</label>
+                </div>
+              </div>
+              <div class="row right">
+                <div class="row">
+                  <div class="input-field col s12 right">
+                    <button class="waves-effect waves-light btn" ng-click="User.create(User.usuario)"><i class="material-icons right">save</i>Cadastrar</button>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

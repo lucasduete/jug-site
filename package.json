@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "postinstall": "npm run build",
-    "build": "npm run bower; gulp",
+    "build": "npm run bower",
     "bower": "bower install -f",
     "serverdev": "gulp server",
     "server": "node server.js"

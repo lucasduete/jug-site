@@ -14,20 +14,19 @@
 
 	            UserService.login(email, senha)
 	                .then(function(success) {
-	                    //Salvando token no localStorage
-	                    let token = success.data.senha;
+
+	                    let token = success.data.Senha;
 	                    localStorage.setItem("token", token);
 
-	                    //Salvando nome, email e tipo de usuário no localStorage
 	                    let usuarioLogado = {
-	                        nome: success.data.nome,
-	                        username: success.data.username,
-	                        email: success.data.email,
+	                        nome: success.data.Nome,
+	                        username: success.data.Username,
+	                        email: success.data.Email,
 	                    };
 
 	                    localStorage.setItem('user', angular.toJson(usuarioLogado));
 
-	                    $location.path('/enquetes');
+	                    $location.path('/index');
 	                })
 	                .catch(function(error) {
 	                    swal({

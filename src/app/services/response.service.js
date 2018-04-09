@@ -5,7 +5,7 @@
         .service("ResponseService", ResponseService);
 
     function ResponseService($http) {
-        const urlBase = 'http://localhost:8080/responses/';
+        const urlBase = 'http://localhost:8080/api/responses/';
         const methods = {
             GET: 'GET',
             POST: 'POST',

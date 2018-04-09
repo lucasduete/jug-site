@@ -5,7 +5,7 @@
         .service("TecnologyService", TecnologyService);
 
     function TecnologyService($http) {
-        const urlBase = 'http://localhost:8080/tecnologias/';
+        const urlBase = 'http://localhost:8080/api/tecnologias/';
         const methods = {
             GET: 'GET',
             POST: 'POST',

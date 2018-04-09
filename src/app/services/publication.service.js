@@ -5,7 +5,7 @@
         .service("PublicationService", PublicationService);
 
     function PublicationService($http) {
-        const urlBase = 'http://localhost:8080/publications/';
+        const urlBase = 'http://localhost:8080/api/publications/';
         const methods = {
             GET: 'GET',
             POST: 'POST',

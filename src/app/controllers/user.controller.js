@@ -81,14 +81,14 @@
             });
         };
 
-        let delete = function() {
+        vm.delete = function() {
             swal({
                 title: 'Tem certeza?',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Sim!',
                 cancelButtonText: 'Não'
-            }).then(result) => {
+            }).then((result) => {
                 if (result.value) {
                     UserService.delete()
                     .then(function(sucess) {
@@ -112,15 +112,15 @@
                         });
                         console.log('Erro remover conta : ', error);
                     })
-                }
-            } else if (result.dismiss === swal.DismissReason.cancel) {
+                } else if (result.dismiss === swal.DismissReason.cancel) {
                     swal(
                         'Cancelado',
                         'A conta não foi excluida',
                         'error'
                     )
-            }
-        };
+                } 
+            });
+        }
 
         let readSingle = function() {
             UserService.readSingle()

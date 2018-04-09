@@ -39,14 +39,14 @@
                 })
         };
 
-        let delete = function() {
+        vm.delete = function() {
             swal({
                 title: 'Tem certeza?',
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Sim!',
                 cancelButtonText: 'Não'
-            }).then(result) => {
+            }).then((result) => {
                 if (result.value) {
                     PublicationService.delete()
                     .then(function(sucess) {
@@ -70,17 +70,17 @@
                         });
                         console.log('Erro remover conta : ', error);
                     })
-                }
-            } else if (result.dismiss === swal.DismissReason.cancel) {
+                } else if (result.dismiss === swal.DismissReason.cancel) {
                     swal(
                         'Cancelado',
                         'A publicação não foi excluida',
                         'error'
                     )
-            }
-        };
+                }
+            });
+        }
 
-        let readSingle = function(idPubl) {
+        vm.readSingle = function(idPubl) {
             PublicationService.readSingle(idPubl)
                 .then(function(success) {
                     vm.publication = success.data;
@@ -93,7 +93,7 @@
         };
 
 
-        let readAll = function() {
+        vm.readAll = function() {
             PublicationService.readAll()
                 .then(function(success) {
                     vm.publications = success.data;
@@ -105,7 +105,7 @@
                 })
         };
 
-        let readByTec = function(tec) {
+        vm.readByTec = function(tec) {
             PublicationService.readByTec(tec)
                 .then(function(success) {
                     vm.publications = success.data;

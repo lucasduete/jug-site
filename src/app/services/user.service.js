@@ -49,7 +49,7 @@
             return $http(request);
         }
 
-        this.delete = function delete(email) {
+        this.delete = function(email) {
         	let path = email;
 
         	let request = {

@@ -35,7 +35,7 @@
             return $http(request);
         }
 
-        this.delete = function delete(publication) {
+        this.delete = function(publication) {
         	let request = {
         		url : urlBase + path,
         		method : methods.DELETE,

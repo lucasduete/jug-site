@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12 m6 l6">
+            
+            <form class="login-form">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/login-image.jpg">
+                        <span class="card-title">
+                        <h2>Login</h2>
+                        <h6>JUG</h6>
+                    </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="input-field">
+                            <input data-ng-model="Login.dados.email" class="validate" id="email" type="email" required>
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="row center">
+                            <div class="col s12 m8 l8">
+                                <div class="input-field">
+                                    <input data-ng-model="Login.dados.senha" id="password" type="password" required>
+                                    <label for="password">Senha</label>
+                                </div>
+                            </div>
+                            <div class="col s12 m4 l3">
+                                <div class="input-field">
+                                    <input type="checkbox" id="remember-me" />
+                                    <label for="remember-me">Lembrar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-action blue-grey lighten-3">
+                        <div class="center-align">
+                            <button data-ng-click="Login.login(Login.dados)" class="btn blue-grey darken-1"><i class="material-icons left">vpn_key</i>Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col s4">
+                    <a href="cadastroUsuario.html">Registrar</a>
+                </div>
+                <div class="col s8 right-align">
+                    <a href="#" class="">Esqueci a senha</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

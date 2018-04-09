@@ -21,6 +21,11 @@
                 controller: 'PublicationController',
                 controllerAs: 'Publication'
             })
+            .when('/cadastrarPublicacao', {
+                templateUrl: '../views/cadastrarPublicacao.html',
+                controller: 'PublicationController',
+                controllerAs: 'Publication' 
+            })
             .otherwise({
                 redirectTo: '/login'
             })

@@ -5,7 +5,7 @@
         .service("UserService", UserService);
 
     function UserService($http) {
-        const urlBase = 'http://localhost:8080/usuarios/';
+        const urlBase = 'http://localhost:8080/api/usuarios/';
         const methods = {
             GET: 'GET',
             POST: 'POST',
@@ -13,13 +13,13 @@
             DELETE: 'DELETE'
         }
 
-        this.login = function(login, senha) {
+        this.login = function(email, senha) {
             let path = "login/";
 
             let request = {
                 url: urlBase + path,
                 method: methods.POST,
-                data: $.param({ 'login': login, 'senha': senha }),
+                data: 'email=' + email + '&senha=' + senha,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 }

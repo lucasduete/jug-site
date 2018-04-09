@@ -9,10 +9,10 @@
 
         vm.login = function(dadosLogin) {
         	if (verificaDados(dadosLogin)) {
-	            let usuario = dadosLogin.usuario;
+	            let email = dadosLogin.email;
 	            let senha = dadosLogin.senha;
 
-	            UserService.login(usuario, senha)
+	            UserService.login(email, senha)
 	                .then(function(success) {
 	                    //Salvando token no localStorage
 	                    let token = success.data.senha;
@@ -21,7 +21,7 @@
 	                    //Salvando nome, email e tipo de usuário no localStorage
 	                    let usuarioLogado = {
 	                        nome: success.data.nome,
-	                        username: sucess.data.username,
+	                        username: success.data.username,
 	                        email: success.data.email,
 	                    };
 
@@ -46,8 +46,8 @@
             localStorage.clear();
         };
         
-        let verificaDados = (dadosLogin, usuario) => {
-            if (dadosLogin === undefined || dadosLogin.usuario === undefined || dadosLogin.senha === undefined || usuario === undefined || usuario === null) {
+        let verificaDados = (dadosLogin) => {
+            if (dadosLogin === undefined || dadosLogin.email === undefined || dadosLogin.senha === undefined) {
                 swal({
                     type: 'error',
                     title: 'Oops...',

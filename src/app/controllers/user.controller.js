@@ -28,9 +28,9 @@
                     swal({
                         type: 'success',
                         title: 'Cadastro realizado!',
-                        text: 'O usuário ' + novoAdm.nome + ' foi cadastrado com sucesso!',
+                        text: 'O usuário ' + newUser.nome + ' foi cadastrado com sucesso!',
                     });
-                    location.reload();
+                    location.href = "/#!/login";
                 })
                 .catch(function(error) {
                     swal({

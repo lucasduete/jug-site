@@ -11,6 +11,11 @@
                 controller: 'LoginController',
                 controllerAs: 'Login'
             })
+            .when('/cadastrar', {
+                templateUrl: '../views/cadastrarUsuario.html',
+                controller: 'UserController',
+                controllerAs: 'User'
+            })
             .otherwise({
                 redirectTo: '/login'
             })

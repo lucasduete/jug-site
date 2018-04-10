@@ -57,12 +57,11 @@
         }
 
         this.readSingle = function(id) {
-            let path = "publication/";
+            let path = id;
 
             let request = {
                 url: urlBase + path,
-                method: methods.POST,
-                data : "id=" + id,
+                method: methods.GET,
                 headers: { 'Authorization': localStorage.token }
             }
 

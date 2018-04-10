@@ -1,0 +1,46 @@
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper teal lighten-1">
+            <ul class="right">
+                <li>
+                	<a href="/#!/cadastrarPublicacao">cadastrar publicação<i class="material-icons prefix right">add_box</i></a>
+                </li>
+                <li class="m4 l4">
+                	<a id="logout" href="/#!/login">logout<i class="material-icons prefix right">exit_to_app</i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container" style="margin-top: 3%;" data-ng-init="Response.readByPubl()">
+	<div data-ng-controller="PublicationController as Publication">
+		<div class="row" data-ng-init="Publication.readSingle()">
+			<div class="col s12 m12 l12">
+			  <div class="card indigo darken-5">
+			    <div class="card-content white-text">
+			      <span class="card-title">{{Publication.publication.titulo}}</span>
+			      <p>{{Publication.publication.conteudo}}</p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div data-ng-repeat="response in Response.responses">
+		<div class="row">
+			<div class="col s12 m12 l12">
+			  <div class="card indigo darken-5">
+			    <div class="card-content white-text">
+			      <span class="card-title">{{response.emailUser}}, em 
+			      {{response.data}}</span>
+			      <p>{{response.conteudo}}</p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+
+</div>

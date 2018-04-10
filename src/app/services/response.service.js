@@ -70,12 +70,11 @@
         }
 
         this.readByPubl = function(publication) {
-            let path = "publication/";
+            let path = "publication/" + publication;
 
             let request = {
                 url: urlBase + path,
-                method: methods.POST,
-                data : publication,
+                method: methods.GET,
                 headers: { 'Authorization': localStorage.token }
             }
 

@@ -79,7 +79,7 @@
             }
         };*/
 
-        let readSingle = function() {
+        vm.readSingle = function() {
             let idResp = $routeParams.id;
             ResponseService.readSingle(idResp)
                 .then(function(success) {
@@ -93,7 +93,7 @@
         };
 
 
-        let readAll = function() {
+        vm.readAll = function() {
             ResponseService.readAll()
                 .then(function(success) {
                     vm.responses = success.data;
@@ -105,8 +105,9 @@
                 })
         };
 
-        let readByPubl = function(idPubl) {
-            ResponseService.readByTec(idPubl)
+        vm.readByPubl = function() {
+            let idPubl = $routeParams.id;
+            ResponseService.readByPubl(idPubl)
                 .then(function(success) {
                     vm.responses = success.data;
 

@@ -26,6 +26,11 @@
                 controller: 'PublicationController',
                 controllerAs: 'Publication' 
             })
+            .when('/publication/:id', {
+                templateUrl: '../views/publicacao.html',
+                controller: 'ResponseController',
+                controllerAs: 'Response' 
+            })
             .otherwise({
                 redirectTo: '/login'
             })

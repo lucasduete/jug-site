@@ -3,9 +3,9 @@
     'use strict';
 
     angular.module('PublicationController', ['PublicationService'])
-        .controller('PublicationController', ['PublicationService', PublicationController]);
+        .controller('PublicationController', ['PublicationService', '$routeParams', PublicationController]);
 
-    function PublicationController(PublicationService) {
+    function PublicationController(PublicationService, $routeParams) {
         let vm = this;
 
         vm.create = function(publ) {
@@ -80,7 +80,8 @@
             });
         }
 
-        vm.readSingle = function(idPubl) {
+        vm.readSingle = function() {
+            let idPubl = $routeParams.id;
             PublicationService.readSingle(idPubl)
                 .then(function(success) {
                     vm.publication = success.data;

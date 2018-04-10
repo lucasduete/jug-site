@@ -3,9 +3,9 @@
     'use strict';
 
     angular.module('ResponseController', ['ResponseService'])
-        .controller('ResponseController', ['ResponseService', ResponseController]);
+        .controller('ResponseController', ['ResponseService', '$routeParams', ResponseController]);
 
-    function ResponseController(ResponseService) {
+    function ResponseController(ResponseService, $routeParams) {
         let vm = this;
 
         vm.create = function(resp) {
@@ -79,7 +79,8 @@
             }
         };*/
 
-        let readSingle = function(idResp) {
+        let readSingle = function() {
+            let idResp = $routeParams.id;
             ResponseService.readSingle(idResp)
                 .then(function(success) {
                     vm.response = success.data;

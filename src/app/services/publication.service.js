@@ -62,7 +62,7 @@
             let request = {
                 url: urlBase + path,
                 method: methods.POST,
-                data : id,
+                data : "id=" + id,
                 headers: { 'Authorization': localStorage.token }
             }
 

@@ -15,13 +15,13 @@
 	            UserService.login(email, senha)
 	                .then(function(success) {
 
-	                    let token = success.data.Senha;
+	                    let token = success.data.senha;
 	                    localStorage.setItem("token", token);
 
 	                    let usuarioLogado = {
-	                        nome: success.data.Nome,
-	                        username: success.data.Username,
-	                        email: success.data.Email,
+	                        nome: success.data.nome,
+	                        username: success.data.username,
+	                        email: success.data.email,
 	                    };
 
 	                    localStorage.setItem('user', angular.toJson(usuarioLogado));

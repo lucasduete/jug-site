@@ -95,4 +95,16 @@
 	    </div>
 	</div>
 
+	<div class="row" data-ng-controller="PublicationController as Publication">
+		<p class="flow-text">Veja também:</p>
+		<ul class="left" ng-init="Publication.getRecomendations()">
+            <li data-ng-repeat="publication in Publication.publications">
+            	<a href="/#!/publication/{{publication.id}}">
+            		{{publication.titulo}}
+            		<i class="material-icons prefix right">add_box</i>
+            	</a>
+            </li>           
+        </ul>
+	</div>
+
 </div>

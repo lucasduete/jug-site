@@ -96,6 +96,18 @@
 
             return $http(request);
         }
+
+        this.getRecomendations = function(idPubl) {
+            let path = "recomendation/" + idPubl;
+
+            let request = {
+                url: urlBase + path,
+                method: methods.GET,
+                headers: { 'Authorization': localStorage.token }
+            }
+
+            return $http(request);
+        }
     }
 
     PublicationService.$inject = ['$http']

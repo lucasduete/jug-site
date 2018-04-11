@@ -140,5 +140,20 @@
                 })
         }
 
+        vm.getRecomendations = function() {
+            let idPubl = $routeParams.id;
+            console.log(idPubl);
+            PublicationService.getRecomendations(idPubl)
+                .then(function(success) {
+                    vm.publications = success.data;
+
+                    console.log('Sucess getRecomendations : ', success.data);
+                })
+                .catch(function(error) {
+                    console.log("Erro requisição de getRecomendations : ", error);
+                })
+        };
+
+
     }
 })();

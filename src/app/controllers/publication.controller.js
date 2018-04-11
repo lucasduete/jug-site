@@ -118,15 +118,22 @@
                 })
         };
 
-        vm.search = function() {
+        vm.clientSearch = function() {
             let param = document.getElementById("search").value;
+            localStorage.param = param;
+
+            location.href = "/#!/search";
+        }
+
+        vm.serverSearch = function() {
+            let param = localStorage.param;
             PublicationService.search(param)
                 .then(function(success) {
-                    console.log("Sucesso na busca", success);
-
-                    location.href = "/#!/search"
                     vm.param = param;
                     vm.publications = success.data;
+
+                    location.href = "/#!/search";
+                    console.log("Sucesso na busca", success);
                 })
                 .catch(function(error) {
                     console.log("Erro na Busca : ", error);

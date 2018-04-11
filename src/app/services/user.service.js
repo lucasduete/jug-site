@@ -28,6 +28,19 @@
             return $http(request);
         }
 
+
+        this.logout = function() {
+            let path = "logout/";
+
+            let request = {
+                url: urlBase + path,
+                method: methods.POST,
+                headers: { 'Authorization': localStorage.token }
+            }
+
+            return $http(request);
+        }
+
         this.create = function(user) {
             let request = {
                 url: urlBase,

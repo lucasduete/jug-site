@@ -41,8 +41,16 @@
         };
 
         vm.sair = function() {
-            $rootScope.user = false;
-            localStorage.clear();
+        	UserService.logout()
+        		.then(function(success) {
+        			$rootScope.user = false;
+            		localStorage.clear();
+
+        			console.log("deslogou: ", success);
+        		})
+            	.catch(function(error) {
+	                    console.log("Não vai dar não: ", error);
+	                })
         };
         
         let verificaDados = (dadosLogin) => {

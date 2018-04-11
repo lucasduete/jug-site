@@ -32,8 +32,8 @@
 	<div data-ng-repeat="response in Response.responses">
 		<div class="row">
 			<div class="col s12 m12 l12">
-			  <div class="card indigo darken-5">
-			    <div class="card-content white-text">
+			  <div class="card blue-grey lighten-4">
+			    <div class="card-content">
 			      <span class="card-title">{{response.emailUser}}, em 
 			      {{response.data}}</span>
 			      <p>{{response.conteudo}}</p>
@@ -41,6 +41,37 @@
 			  </div>
 			</div>
 		</div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="row">
+	      <div class="col s12 m12 l12">
+	        <div class="card-panel">
+	          <h4 class="header2 flow-text">Enviar Nova Resposta</h4>
+	          <div class="row">
+	            <form class="col s12">
+	              <div class="row">
+	                <div class="input-field col s12">
+	                  <i class="material-icons prefix" style="margin-top: 1%;">description</i>
+	                  <input data-ng-model="Response.response.conteudo" id="conteudo" class="validate" type="text">
+	                  <label for="conteudo" class="active">Sua Resposta</label>
+	                </div>
+	              </div>
+	              <div class="row right">
+	                <div class="row">
+	                  <div class="input-field col s12 right">
+	                    <button class="waves-effect waves-light btn" data-ng-click="Response.create(Response.response)"><i class="material-icons right">send</i>Enviar</button>
+	                    </button>
+	                  </div>
+	                </div>
+	              </div>
+	            </form>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
 	</div>
 
 </div>

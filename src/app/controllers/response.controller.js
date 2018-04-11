@@ -14,12 +14,11 @@
             if (resp) {
                 newResp = {
                     'conteudo' : resp.conteudo,
-                    'data': "2000-02-01",
-                    'idPublication': resp.idPublication
+                    'idPublication': $routeParams.id
                 };
             }
 
-            ResponseService.create(resp)
+            ResponseService.create(newResp)
                 .then(function(success) {
                     swal({
                         type: 'success',

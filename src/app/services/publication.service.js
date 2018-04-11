@@ -82,11 +82,16 @@
         }
 
         this.search = function(param) {
+            let path = "search/";
+
             let request = {
-                url: urlBase,
-                method: methods.GET,
-                data: "param=" + param,
-                headers: {'Authorization': localStorage.token}
+                url: urlBase + path,
+                method: methods.POST,
+                data: 'param=' + param,
+                headers: {
+                    'Authorization': localStorage.token,
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
             }
 
             return $http(request);

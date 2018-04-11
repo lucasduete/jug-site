@@ -80,6 +80,17 @@
 
             return $http(request);
         }
+
+        this.search = function(param) {
+            let request = {
+                url: urlBase,
+                method: methods.GET,
+                data: "param=" + param,
+                headers: {'Authorization': localStorage.token}
+            }
+
+            return $http(request);
+        }
     }
 
     PublicationService.$inject = ['$http']

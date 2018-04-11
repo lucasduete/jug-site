@@ -118,6 +118,20 @@
                 })
         };
 
+        vm.search = function() {
+            let param = document.getElementById("search").value;
+            PublicationService.search(param)
+                .then(function(success) {
+                    console.log("Sucesso na busca", success);
+
+                    location.href = "/#!/search"
+                    vm.param = param;
+                    vm.publications = success.data;
+                })
+                .catch(function(error) {
+                    console.log("Erro na Busca : ", error);
+                })
+        }
 
     }
 })();

@@ -31,6 +31,11 @@
                 controller: 'ResponseController',
                 controllerAs: 'Response' 
             })
+            .when('/search', {
+                templateUrl: '../views/search.html',
+                controller: 'PublicationController',
+                controllerAs: 'Publication'
+            })
             .otherwise({
                 redirectTo: '/login'
             })

@@ -6,9 +6,6 @@
 
     function preAtivador($rootScope, $location) {
         $rootScope.$on('$routeChangeStart', function(event, next, current) {
-            if ($location.path() == '/login') {
-                localStorage.clear();
-            }
             if (next.authorize) {
                 if (!localStorage.token) {
                     event.preventDefault();
